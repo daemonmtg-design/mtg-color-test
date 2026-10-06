@@ -1,0 +1,1351 @@
+{
+ "meta": {
+  "version": "1.0-beta",
+  "colors": [
+   "W",
+   "U",
+   "B",
+   "R",
+   "G"
+  ],
+  "color_names": {
+   "W": "White",
+   "U": "Blue",
+   "B": "Black",
+   "R": "Red",
+   "G": "Green"
+  }
+ },
+ "sections": {
+  "values": {
+   "instruction": "Below are short descriptions of different people. For each one, decide how much that person is like you.",
+   "scale": [
+    "Not like me at all",
+    "Not like me",
+    "A little like me",
+    "Somewhat like me",
+    "Like me",
+    "Very much like me"
+   ],
+   "quick": [
+    {
+     "id": "v1",
+     "text": "Coming up with new ideas and doing things in their own original way matters to them.",
+     "value": "SD"
+    },
+    {
+     "id": "v2",
+     "text": "They want to be wealthy and own expensive things.",
+     "value": "PO"
+    },
+    {
+     "id": "v3",
+     "text": "They believe everyone in the world should be treated equally and have the same opportunities.",
+     "value": "UN"
+    },
+    {
+     "id": "v4",
+     "text": "Showing their abilities and being admired for them matters to them.",
+     "value": "AC"
+    },
+    {
+     "id": "v5",
+     "text": "Living somewhere safe and avoiding anything that could put them in danger is important to them.",
+     "value": "SE"
+    },
+    {
+     "id": "v6",
+     "text": "They like surprises and are always looking for new things to try.",
+     "value": "ST"
+    },
+    {
+     "id": "v7",
+     "text": "They think people should follow the rules, even when nobody is watching.",
+     "value": "CO"
+    },
+    {
+     "id": "v8",
+     "text": "Listening to people who are different from them and understanding their views matters to them.",
+     "value": "UN"
+    },
+    {
+     "id": "v9",
+     "text": "They try not to draw attention to themselves and prefer to stay modest.",
+     "value": "TR"
+    },
+    {
+     "id": "v10",
+     "text": "Having a good time and enjoying life's pleasures is important to them.",
+     "value": "HE"
+    },
+    {
+     "id": "v11",
+     "text": "Making their own decisions and being free to choose what they do matters to them.",
+     "value": "SD"
+    },
+    {
+     "id": "v12",
+     "text": "Helping the people around them and caring for their wellbeing is very important to them.",
+     "value": "BE"
+    },
+    {
+     "id": "v13",
+     "text": "Being very successful and having people recognize their achievements matters to them.",
+     "value": "AC"
+    },
+    {
+     "id": "v14",
+     "text": "They want a strong government that keeps citizens safe from threats.",
+     "value": "SE"
+    },
+    {
+     "id": "v15",
+     "text": "They seek out adventure and like taking risks.",
+     "value": "ST"
+    },
+    {
+     "id": "v16",
+     "text": "Behaving properly and avoiding things others would say are wrong is important to them.",
+     "value": "CO"
+    },
+    {
+     "id": "v17",
+     "text": "They want to be in charge and have others do what they say.",
+     "value": "PO"
+    },
+    {
+     "id": "v18",
+     "text": "Being loyal to their friends and devoted to the people close to them matters to them.",
+     "value": "BE"
+    },
+    {
+     "id": "v19",
+     "text": "They firmly believe people should protect nature and care for the environment.",
+     "value": "UN"
+    },
+    {
+     "id": "v20",
+     "text": "Following the customs and traditions passed down by their family or religion is important to them.",
+     "value": "TR"
+    },
+    {
+     "id": "v21",
+     "text": "They look for every chance to have fun and do things that give them pleasure.",
+     "value": "HE"
+    }
+   ],
+   "long": [
+    {
+     "id": "v1",
+     "text": "Coming up with new ideas and being creative matters to them; they like doing things their own way.",
+     "value": "SD"
+    },
+    {
+     "id": "v2",
+     "text": "Being rich is important to them; they want lots of money and expensive things.",
+     "value": "PO"
+    },
+    {
+     "id": "v3",
+     "text": "They think every person in the world should be treated equally and have the same opportunities.",
+     "value": "UN"
+    },
+    {
+     "id": "v4",
+     "text": "Showing what they can do matters to them; they want people to admire their work.",
+     "value": "AC"
+    },
+    {
+     "id": "v5",
+     "text": "Living somewhere safe matters to them; they avoid anything that could put them at risk.",
+     "value": "SE"
+    },
+    {
+     "id": "v6",
+     "text": "They think it's important to do many different things in life, and they always look for something new to try.",
+     "value": "ST"
+    },
+    {
+     "id": "v7",
+     "text": "They believe people should do as they're told and follow the rules, even when nobody is watching.",
+     "value": "CO"
+    },
+    {
+     "id": "v8",
+     "text": "Listening to people who are different from them matters; even when they disagree, they want to understand them.",
+     "value": "UN"
+    },
+    {
+     "id": "v9",
+     "text": "They think people should be content with what they have and not ask for more.",
+     "value": "TR"
+    },
+    {
+     "id": "v10",
+     "text": "They look for every chance to have fun; doing things that give them pleasure matters to them.",
+     "value": "HE"
+    },
+    {
+     "id": "v11",
+     "text": "Making their own decisions matters to them; they like being free to plan and choose what they do.",
+     "value": "SD"
+    },
+    {
+     "id": "v12",
+     "text": "Helping the people around them is very important; they want to look after their wellbeing.",
+     "value": "BE"
+    },
+    {
+     "id": "v13",
+     "text": "Being very successful matters to them; they like to impress others.",
+     "value": "AC"
+    },
+    {
+     "id": "v14",
+     "text": "It's very important to them that their country is safe from threats, inside and out.",
+     "value": "SE"
+    },
+    {
+     "id": "v15",
+     "text": "They like taking risks and are always looking for adventure.",
+     "value": "ST"
+    },
+    {
+     "id": "v16",
+     "text": "Always behaving properly matters to them; they avoid doing anything people would call wrong.",
+     "value": "CO"
+    },
+    {
+     "id": "v17",
+     "text": "Being in charge and telling others what to do matters to them; they want people to follow their instructions.",
+     "value": "PO"
+    },
+    {
+     "id": "v18",
+     "text": "Being loyal to their friends matters; they want to dedicate themselves to the people close to them.",
+     "value": "BE"
+    },
+    {
+     "id": "v19",
+     "text": "They firmly believe people should care for nature; looking after the environment matters to them.",
+     "value": "UN"
+    },
+    {
+     "id": "v20",
+     "text": "Their religious or spiritual beliefs are important to them, and they try hard to live by them.",
+     "value": "TR"
+    },
+    {
+     "id": "v21",
+     "text": "They want things organized and clean; mess really bothers them.",
+     "value": "SE"
+    },
+    {
+     "id": "v22",
+     "text": "Being curious matters to them; they like trying to understand all kinds of things.",
+     "value": "SD"
+    },
+    {
+     "id": "v23",
+     "text": "They believe all the world's people should live in harmony, and promoting peace between groups matters to them.",
+     "value": "UN"
+    },
+    {
+     "id": "v24",
+     "text": "They think being ambitious is important; they want to show how capable they are.",
+     "value": "AC"
+    },
+    {
+     "id": "v25",
+     "text": "They think traditional ways of doing things are best, and keeping up the customs they learned matters to them.",
+     "value": "TR"
+    },
+    {
+     "id": "v26",
+     "text": "Enjoying life's pleasures matters to them; they like to treat themselves.",
+     "value": "HE"
+    },
+    {
+     "id": "v27",
+     "text": "Responding to other people's needs matters to them; they try to support the people they know.",
+     "value": "BE"
+    },
+    {
+     "id": "v28",
+     "text": "They believe in always showing respect to parents and older people, and being obedient matters to them.",
+     "value": "CO"
+    },
+    {
+     "id": "v29",
+     "text": "They want everyone treated fairly, even strangers, and protecting the vulnerable in society matters to them.",
+     "value": "UN"
+    },
+    {
+     "id": "v30",
+     "text": "They like surprises; having an exciting life matters to them.",
+     "value": "ST"
+    },
+    {
+     "id": "v31",
+     "text": "Staying healthy is very important to them; they work hard to avoid getting sick.",
+     "value": "SE"
+    },
+    {
+     "id": "v32",
+     "text": "Getting ahead in life matters to them; they try to do better than others.",
+     "value": "AC"
+    },
+    {
+     "id": "v33",
+     "text": "Forgiving people who have hurt them matters; they try to see the good in them and not hold grudges.",
+     "value": "BE"
+    },
+    {
+     "id": "v34",
+     "text": "Being independent matters to them; they like to rely on themselves.",
+     "value": "SD"
+    },
+    {
+     "id": "v35",
+     "text": "A stable government matters to them; they want the social order protected.",
+     "value": "SE"
+    },
+    {
+     "id": "v36",
+     "text": "Being polite at all times matters to them; they try never to bother or annoy others.",
+     "value": "CO"
+    },
+    {
+     "id": "v37",
+     "text": "They really want to enjoy life; having a good time is very important to them.",
+     "value": "HE"
+    },
+    {
+     "id": "v38",
+     "text": "Being humble and modest matters to them; they try not to draw attention to themselves.",
+     "value": "TR"
+    },
+    {
+     "id": "v39",
+     "text": "They always want to be the one making decisions; they like to lead.",
+     "value": "PO"
+    },
+    {
+     "id": "v40",
+     "text": "Fitting in with nature matters to them; they believe people shouldn't change the natural world.",
+     "value": "UN"
+    }
+   ],
+   "value_names": {
+    "SD": "Self-direction",
+    "ST": "Stimulation",
+    "HE": "Hedonism",
+    "AC": "Achievement",
+    "PO": "Power",
+    "SE": "Security",
+    "CO": "Conformity",
+    "TR": "Tradition",
+    "BE": "Benevolence",
+    "UN": "Universalism"
+   }
+  },
+  "personality": {
+   "instruction": "Describe yourself as you generally are now, not as you wish to be, compared with other people your age.",
+   "scale": [
+    "Very inaccurate",
+    "Moderately inaccurate",
+    "Neither",
+    "Moderately accurate",
+    "Very accurate"
+   ],
+   "quick": [
+    {
+     "id": "p1",
+     "text": "I am the life of the party.",
+     "trait": "E",
+     "reversed": false
+    },
+    {
+     "id": "p2",
+     "text": "I sympathize with others' feelings.",
+     "trait": "A",
+     "reversed": false
+    },
+    {
+     "id": "p3",
+     "text": "I get chores done right away.",
+     "trait": "C",
+     "reversed": false
+    },
+    {
+     "id": "p4",
+     "text": "I have frequent mood swings.",
+     "trait": "N",
+     "reversed": false
+    },
+    {
+     "id": "p5",
+     "text": "I have a vivid imagination.",
+     "trait": "O",
+     "reversed": false
+    },
+    {
+     "id": "p6",
+     "text": "I don't talk a lot.",
+     "trait": "E",
+     "reversed": true
+    },
+    {
+     "id": "p7",
+     "text": "I am not interested in other people's problems.",
+     "trait": "A",
+     "reversed": true
+    },
+    {
+     "id": "p8",
+     "text": "I often forget to put things back in their proper place.",
+     "trait": "C",
+     "reversed": true
+    },
+    {
+     "id": "p9",
+     "text": "I am relaxed most of the time.",
+     "trait": "N",
+     "reversed": true
+    },
+    {
+     "id": "p10",
+     "text": "I am not interested in abstract ideas.",
+     "trait": "O",
+     "reversed": true
+    },
+    {
+     "id": "p11",
+     "text": "I talk to a lot of different people at parties.",
+     "trait": "E",
+     "reversed": false
+    },
+    {
+     "id": "p12",
+     "text": "I feel others' emotions.",
+     "trait": "A",
+     "reversed": false
+    },
+    {
+     "id": "p13",
+     "text": "I like order.",
+     "trait": "C",
+     "reversed": false
+    },
+    {
+     "id": "p14",
+     "text": "I get upset easily.",
+     "trait": "N",
+     "reversed": false
+    },
+    {
+     "id": "p15",
+     "text": "I have difficulty understanding abstract ideas.",
+     "trait": "O",
+     "reversed": true
+    },
+    {
+     "id": "p16",
+     "text": "I keep in the background.",
+     "trait": "E",
+     "reversed": true
+    },
+    {
+     "id": "p17",
+     "text": "I am not really interested in others.",
+     "trait": "A",
+     "reversed": true
+    },
+    {
+     "id": "p18",
+     "text": "I make a mess of things.",
+     "trait": "C",
+     "reversed": true
+    },
+    {
+     "id": "p19",
+     "text": "I seldom feel blue.",
+     "trait": "N",
+     "reversed": true
+    },
+    {
+     "id": "p20",
+     "text": "I do not have a good imagination.",
+     "trait": "O",
+     "reversed": true
+    }
+   ],
+   "long": [
+    {
+     "id": "p1",
+     "text": "I am the life of the party.",
+     "trait": "E",
+     "reversed": false
+    },
+    {
+     "id": "p2",
+     "text": "I feel little concern for others.",
+     "trait": "A",
+     "reversed": true
+    },
+    {
+     "id": "p3",
+     "text": "I am always prepared.",
+     "trait": "C",
+     "reversed": false
+    },
+    {
+     "id": "p4",
+     "text": "I get stressed out easily.",
+     "trait": "N",
+     "reversed": false
+    },
+    {
+     "id": "p5",
+     "text": "I have a rich vocabulary.",
+     "trait": "O",
+     "reversed": false
+    },
+    {
+     "id": "p6",
+     "text": "I don't talk a lot.",
+     "trait": "E",
+     "reversed": true
+    },
+    {
+     "id": "p7",
+     "text": "I am interested in people.",
+     "trait": "A",
+     "reversed": false
+    },
+    {
+     "id": "p8",
+     "text": "I leave my belongings around.",
+     "trait": "C",
+     "reversed": true
+    },
+    {
+     "id": "p9",
+     "text": "I am relaxed most of the time.",
+     "trait": "N",
+     "reversed": true
+    },
+    {
+     "id": "p10",
+     "text": "I have difficulty understanding abstract ideas.",
+     "trait": "O",
+     "reversed": true
+    },
+    {
+     "id": "p11",
+     "text": "I feel comfortable around people.",
+     "trait": "E",
+     "reversed": false
+    },
+    {
+     "id": "p12",
+     "text": "I insult people.",
+     "trait": "A",
+     "reversed": true
+    },
+    {
+     "id": "p13",
+     "text": "I pay attention to details.",
+     "trait": "C",
+     "reversed": false
+    },
+    {
+     "id": "p14",
+     "text": "I worry about things.",
+     "trait": "N",
+     "reversed": false
+    },
+    {
+     "id": "p15",
+     "text": "I have a vivid imagination.",
+     "trait": "O",
+     "reversed": false
+    },
+    {
+     "id": "p16",
+     "text": "I keep in the background.",
+     "trait": "E",
+     "reversed": true
+    },
+    {
+     "id": "p17",
+     "text": "I sympathize with others' feelings.",
+     "trait": "A",
+     "reversed": false
+    },
+    {
+     "id": "p18",
+     "text": "I make a mess of things.",
+     "trait": "C",
+     "reversed": true
+    },
+    {
+     "id": "p19",
+     "text": "I seldom feel blue.",
+     "trait": "N",
+     "reversed": true
+    },
+    {
+     "id": "p20",
+     "text": "I am not interested in abstract ideas.",
+     "trait": "O",
+     "reversed": true
+    },
+    {
+     "id": "p21",
+     "text": "I start conversations.",
+     "trait": "E",
+     "reversed": false
+    },
+    {
+     "id": "p22",
+     "text": "I am not interested in other people's problems.",
+     "trait": "A",
+     "reversed": true
+    },
+    {
+     "id": "p23",
+     "text": "I get chores done right away.",
+     "trait": "C",
+     "reversed": false
+    },
+    {
+     "id": "p24",
+     "text": "I am easily disturbed.",
+     "trait": "N",
+     "reversed": false
+    },
+    {
+     "id": "p25",
+     "text": "I have excellent ideas.",
+     "trait": "O",
+     "reversed": false
+    },
+    {
+     "id": "p26",
+     "text": "I have little to say.",
+     "trait": "E",
+     "reversed": true
+    },
+    {
+     "id": "p27",
+     "text": "I have a soft heart.",
+     "trait": "A",
+     "reversed": false
+    },
+    {
+     "id": "p28",
+     "text": "I often forget to put things back in their proper place.",
+     "trait": "C",
+     "reversed": true
+    },
+    {
+     "id": "p29",
+     "text": "I get upset easily.",
+     "trait": "N",
+     "reversed": false
+    },
+    {
+     "id": "p30",
+     "text": "I do not have a good imagination.",
+     "trait": "O",
+     "reversed": true
+    },
+    {
+     "id": "p31",
+     "text": "I talk to a lot of different people at parties.",
+     "trait": "E",
+     "reversed": false
+    },
+    {
+     "id": "p32",
+     "text": "I am not really interested in others.",
+     "trait": "A",
+     "reversed": true
+    },
+    {
+     "id": "p33",
+     "text": "I like order.",
+     "trait": "C",
+     "reversed": false
+    },
+    {
+     "id": "p34",
+     "text": "I change my mood a lot.",
+     "trait": "N",
+     "reversed": false
+    },
+    {
+     "id": "p35",
+     "text": "I am quick to understand things.",
+     "trait": "O",
+     "reversed": false
+    },
+    {
+     "id": "p36",
+     "text": "I don't like to draw attention to myself.",
+     "trait": "E",
+     "reversed": true
+    },
+    {
+     "id": "p37",
+     "text": "I take time out for others.",
+     "trait": "A",
+     "reversed": false
+    },
+    {
+     "id": "p38",
+     "text": "I shirk my duties.",
+     "trait": "C",
+     "reversed": true
+    },
+    {
+     "id": "p39",
+     "text": "I have frequent mood swings.",
+     "trait": "N",
+     "reversed": false
+    },
+    {
+     "id": "p40",
+     "text": "I use difficult words.",
+     "trait": "O",
+     "reversed": false
+    },
+    {
+     "id": "p41",
+     "text": "I don't mind being the center of attention.",
+     "trait": "E",
+     "reversed": false
+    },
+    {
+     "id": "p42",
+     "text": "I feel others' emotions.",
+     "trait": "A",
+     "reversed": false
+    },
+    {
+     "id": "p43",
+     "text": "I follow a schedule.",
+     "trait": "C",
+     "reversed": false
+    },
+    {
+     "id": "p44",
+     "text": "I get irritated easily.",
+     "trait": "N",
+     "reversed": false
+    },
+    {
+     "id": "p45",
+     "text": "I spend time reflecting on things.",
+     "trait": "O",
+     "reversed": false
+    },
+    {
+     "id": "p46",
+     "text": "I am quiet around strangers.",
+     "trait": "E",
+     "reversed": true
+    },
+    {
+     "id": "p47",
+     "text": "I make people feel at ease.",
+     "trait": "A",
+     "reversed": false
+    },
+    {
+     "id": "p48",
+     "text": "I am exacting in my work.",
+     "trait": "C",
+     "reversed": false
+    },
+    {
+     "id": "p49",
+     "text": "I often feel blue.",
+     "trait": "N",
+     "reversed": false
+    },
+    {
+     "id": "p50",
+     "text": "I am full of ideas.",
+     "trait": "O",
+     "reversed": false
+    }
+   ]
+  },
+  "motivations": {
+   "instruction": "Rate each statement based on how you usually are, not how you'd like to be.",
+   "scale": [
+    "Doesn't describe me at all",
+    "Describes me partially",
+    "Describes me very much"
+   ],
+   "items": [
+    {
+     "id": "m1",
+     "text": "Sometimes I may impose my will because I think it's the best way to make things happen.",
+     "type": 8,
+     "side": "U"
+    },
+    {
+     "id": "m2",
+     "text": "New experiences and possibilities excite me.",
+     "type": 7,
+     "side": "H"
+    },
+    {
+     "id": "m3",
+     "text": "Sometimes I feel that my worth depends on what I achieve.",
+     "type": 3,
+     "side": "U"
+    },
+    {
+     "id": "m4",
+     "text": "I often offer my help even before anyone asks for it.",
+     "type": 2,
+     "side": "H"
+    },
+    {
+     "id": "m5",
+     "text": "I prefer to say what I think directly rather than hide it.",
+     "type": 8,
+     "side": "H"
+    },
+    {
+     "id": "m6",
+     "text": "I may start many projects because new things excite me, and then lose interest.",
+     "type": 7,
+     "side": "U"
+    },
+    {
+     "id": "m7",
+     "text": "I like setting goals and achieving results.",
+     "type": 3,
+     "side": "H"
+    },
+    {
+     "id": "m8",
+     "text": "When I feel threatened, I can become distrustful, defensive, or overly watchful.",
+     "type": 6,
+     "side": "U"
+    },
+    {
+     "id": "m9",
+     "text": "Sometimes I compare myself to others and feel they have something I lack.",
+     "type": 4,
+     "side": "U"
+    },
+    {
+     "id": "m10",
+     "text": "I feel I have a particular identity that sets me apart from others.",
+     "type": 4,
+     "side": "H"
+    },
+    {
+     "id": "m11",
+     "text": "I strongly defend people I consider vulnerable.",
+     "type": 8,
+     "side": "H"
+    },
+    {
+     "id": "m12",
+     "text": "I can imagine negative scenarios even when everything seems fine.",
+     "type": 6,
+     "side": "U"
+    },
+    {
+     "id": "m13",
+     "text": "Sometimes I put my own needs aside to keep the peace.",
+     "type": 9,
+     "side": "U"
+    },
+    {
+     "id": "m14",
+     "text": "I can get stuck in feelings of sadness, nostalgia, or being misunderstood.",
+     "type": 4,
+     "side": "U"
+    },
+    {
+     "id": "m15",
+     "text": "I make an effort to do things right, even if no one will recognize it.",
+     "type": 1,
+     "side": "H"
+    },
+    {
+     "id": "m16",
+     "text": "When I have a problem, my first reaction is usually to withdraw and think.",
+     "type": 5,
+     "side": "U"
+    },
+    {
+     "id": "m17",
+     "text": "I find it hard to show vulnerability in front of others.",
+     "type": 8,
+     "side": "U"
+    },
+    {
+     "id": "m18",
+     "text": "Sometimes I give a lot and then feel disappointed if I don't get recognition or affection in return.",
+     "type": 2,
+     "side": "U"
+    },
+    {
+     "id": "m19",
+     "text": "I'm good at preparing for problems before they happen.",
+     "type": 6,
+     "side": "H"
+    },
+    {
+     "id": "m20",
+     "text": "I may postpone decisions or problems, hoping the situation will resolve itself.",
+     "type": 9,
+     "side": "U"
+    },
+    {
+     "id": "m21",
+     "text": "I need to feel that my life has authenticity and personal meaning.",
+     "type": 4,
+     "side": "H"
+    },
+    {
+     "id": "m22",
+     "text": "I'm very hard on myself when I make a mistake.",
+     "type": 1,
+     "side": "U"
+    },
+    {
+     "id": "m23",
+     "text": "I like creating calm and harmonious environments.",
+     "type": 9,
+     "side": "H"
+    },
+    {
+     "id": "m24",
+     "text": "It really hurts to feel that someone I love doesn't need me.",
+     "type": 2,
+     "side": "U"
+    },
+    {
+     "id": "m25",
+     "text": "I like to understand deeply how things work.",
+     "type": 5,
+     "side": "H"
+    },
+    {
+     "id": "m26",
+     "text": "I have a strong sense of right and wrong.",
+     "type": 1,
+     "side": "H"
+    },
+    {
+     "id": "m27",
+     "text": "I feel that other people's demands can drain too much of my energy.",
+     "type": 5,
+     "side": "U"
+    },
+    {
+     "id": "m28",
+     "text": "I can worry too much about projecting an image of success.",
+     "type": 3,
+     "side": "U"
+    },
+    {
+     "id": "m29",
+     "text": "I find it easy to understand different points of view.",
+     "type": 9,
+     "side": "H"
+    },
+    {
+     "id": "m30",
+     "text": "I prefer to observe and analyze before taking part.",
+     "type": 5,
+     "side": "H"
+    },
+    {
+     "id": "m31",
+     "text": "When something makes me suffer, I may quickly look for another activity to distract myself.",
+     "type": 7,
+     "side": "U"
+    },
+    {
+     "id": "m32",
+     "text": "It comes naturally to me to notice what other people need.",
+     "type": 2,
+     "side": "H"
+    },
+    {
+     "id": "m33",
+     "text": "Sometimes I feel I have to correct, improve, or control things so they work properly.",
+     "type": 1,
+     "side": "U"
+    },
+    {
+     "id": "m34",
+     "text": "I usually find alternatives when a problem comes up.",
+     "type": 7,
+     "side": "H"
+    },
+    {
+     "id": "m35",
+     "text": "I can adapt to different situations to get what I set out to achieve.",
+     "type": 3,
+     "side": "H"
+    },
+    {
+     "id": "m36",
+     "text": "I value loyalty and trust very highly.",
+     "type": 6,
+     "side": "H"
+    }
+   ]
+  },
+  "dilemmas": {
+   "instruction": "In each group, choose the statement that is most like you and the one that is least like you.",
+   "groups": [
+    {
+     "id": "g1",
+     "statements": [
+      {
+       "id": "g1s1",
+       "text": "I'm someone others can count on to show up.",
+       "color": "W"
+      },
+      {
+       "id": "g1s2",
+       "text": "I enjoy puzzles and problems that make me think.",
+       "color": "U"
+      },
+      {
+       "id": "g1s3",
+       "text": "I'm fiercely loyal to the people I love.",
+       "color": "R"
+      }
+     ]
+    },
+    {
+     "id": "g2",
+     "statements": [
+      {
+       "id": "g2s1",
+       "text": "I keep my promises, even when it's inconvenient.",
+       "color": "W"
+      },
+      {
+       "id": "g2s2",
+       "text": "I believe my life is mine to shape.",
+       "color": "B"
+      },
+      {
+       "id": "g2s3",
+       "text": "I enjoy learning something new just for the sake of it.",
+       "color": "U"
+      }
+     ]
+    },
+    {
+     "id": "g3",
+     "statements": [
+      {
+       "id": "g3s1",
+       "text": "I throw myself fully into the things I care about.",
+       "color": "R"
+      },
+      {
+       "id": "g3s2",
+       "text": "I put real effort into building the life I want.",
+       "color": "B"
+      },
+      {
+       "id": "g3s3",
+       "text": "I believe small acts of decency add up to a better world.",
+       "color": "W"
+      }
+     ]
+    },
+    {
+     "id": "g4",
+     "statements": [
+      {
+       "id": "g4s1",
+       "text": "I stand up for people who are being treated unfairly.",
+       "color": "W"
+      },
+      {
+       "id": "g4s2",
+       "text": "I take pride in being capable and independent.",
+       "color": "B"
+      },
+      {
+       "id": "g4s3",
+       "text": "I try to look at problems calmly and objectively.",
+       "color": "U"
+      }
+     ]
+    },
+    {
+     "id": "g5",
+     "statements": [
+      {
+       "id": "g5s1",
+       "text": "I know when to let go of what I can't control.",
+       "color": "G"
+      },
+      {
+       "id": "g5s2",
+       "text": "I enjoy understanding how things work.",
+       "color": "U"
+      },
+      {
+       "id": "g5s3",
+       "text": "I try to treat everyone by the same standards.",
+       "color": "W"
+      }
+     ]
+    },
+    {
+     "id": "g6",
+     "statements": [
+      {
+       "id": "g6s1",
+       "text": "I make the most of whatever resources I have.",
+       "color": "B"
+      },
+      {
+       "id": "g6s2",
+       "text": "My enthusiasm tends to lift the people around me.",
+       "color": "R"
+      },
+      {
+       "id": "g6s3",
+       "text": "I like asking questions until something makes sense to me.",
+       "color": "U"
+      }
+     ]
+    },
+    {
+     "id": "g7",
+     "statements": [
+      {
+       "id": "g7s1",
+       "text": "I feel responsible for the people who depend on me.",
+       "color": "W"
+      },
+      {
+       "id": "g7s2",
+       "text": "I like to slow down and enjoy the present moment.",
+       "color": "G"
+      },
+      {
+       "id": "g7s3",
+       "text": "I enjoy being spontaneous and making room for adventure.",
+       "color": "R"
+      }
+     ]
+    },
+    {
+     "id": "g8",
+     "statements": [
+      {
+       "id": "g8s1",
+       "text": "I'm open about my feelings with the people I'm close to.",
+       "color": "R"
+      },
+      {
+       "id": "g8s2",
+       "text": "I pay attention to what feels natural and right for me.",
+       "color": "G"
+      },
+      {
+       "id": "g8s3",
+       "text": "I like being part of a team where everyone does their share.",
+       "color": "W"
+      }
+     ]
+    },
+    {
+     "id": "g9",
+     "statements": [
+      {
+       "id": "g9s1",
+       "text": "I'd rather settle disagreements calmly and fairly than fight about them.",
+       "color": "W"
+      },
+      {
+       "id": "g9s2",
+       "text": "I'm always looking for a better way to do things.",
+       "color": "U"
+      },
+      {
+       "id": "g9s3",
+       "text": "I'm comfortable being exactly who I am.",
+       "color": "G"
+      }
+     ]
+    },
+    {
+     "id": "g10",
+     "statements": [
+      {
+       "id": "g10s1",
+       "text": "I can stay at peace even when things are uncertain.",
+       "color": "G"
+      },
+      {
+       "id": "g10s2",
+       "text": "I'm realistic about what it takes to succeed.",
+       "color": "B"
+      },
+      {
+       "id": "g10s3",
+       "text": "I think things run better when everyone agrees on how to do them.",
+       "color": "W"
+      }
+     ]
+    },
+    {
+     "id": "g11",
+     "statements": [
+      {
+       "id": "g11s1",
+       "text": "I like having a plan before I start something big.",
+       "color": "U"
+      },
+      {
+       "id": "g11s2",
+       "text": "I'm driven to make the most of my potential.",
+       "color": "B"
+      },
+      {
+       "id": "g11s3",
+       "text": "I'm honest with people, even when it's hard to hear.",
+       "color": "R"
+      }
+     ]
+    },
+    {
+     "id": "g12",
+     "statements": [
+      {
+       "id": "g12s1",
+       "text": "I like to think a decision through before I make it.",
+       "color": "U"
+      },
+      {
+       "id": "g12s2",
+       "text": "I rely on myself to get what I need.",
+       "color": "B"
+      },
+      {
+       "id": "g12s3",
+       "text": "I'm happy with the simple things in life.",
+       "color": "G"
+      }
+     ]
+    },
+    {
+     "id": "g13",
+     "statements": [
+      {
+       "id": "g13s1",
+       "text": "I act quickly when something matters to me.",
+       "color": "R"
+      },
+      {
+       "id": "g13s2",
+       "text": "I enjoy mastering a subject through practice and study.",
+       "color": "U"
+      },
+      {
+       "id": "g13s3",
+       "text": "I feel most at home when I'm connected to the people and places I come from.",
+       "color": "G"
+      }
+     ]
+    },
+    {
+     "id": "g14",
+     "statements": [
+      {
+       "id": "g14s1",
+       "text": "I feel connected to something bigger than myself.",
+       "color": "G"
+      },
+      {
+       "id": "g14s2",
+       "text": "I'm good at spotting opportunities others miss.",
+       "color": "B"
+      },
+      {
+       "id": "g14s3",
+       "text": "I like to make the most of every moment.",
+       "color": "R"
+      }
+     ]
+    },
+    {
+     "id": "g15",
+     "statements": [
+      {
+       "id": "g15s1",
+       "text": "I'd rather try something and fail than never try at all.",
+       "color": "R"
+      },
+      {
+       "id": "g15s2",
+       "text": "I don't wait for permission to go after what I want.",
+       "color": "B"
+      },
+      {
+       "id": "g15s3",
+       "text": "I believe good things take time to grow.",
+       "color": "G"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "results": {
+  "W": "White",
+  "U": "Blue",
+  "B": "Black",
+  "R": "Red",
+  "G": "Green",
+  "WU": "Azorius",
+  "UB": "Dimir",
+  "BR": "Rakdos",
+  "RG": "Gruul",
+  "GW": "Selesnya",
+  "WB": "Orzhov",
+  "UR": "Izzet",
+  "BG": "Golgari",
+  "RW": "Boros",
+  "GU": "Simic",
+  "GWU": "Bant",
+  "WUB": "Esper",
+  "UBR": "Grixis",
+  "BRG": "Jund",
+  "RGW": "Naya",
+  "WBG": "Abzan",
+  "URW": "Jeskai",
+  "BGU": "Sultai",
+  "RWB": "Mardu",
+  "GUR": "Temur",
+  "WUBG": "Growth",
+  "WUBR": "Artifice",
+  "WBRG": "Aggression",
+  "WURG": "Altruism",
+  "UBRG": "Chaos",
+  "WUBRG": "WUBRG"
+ }
+}

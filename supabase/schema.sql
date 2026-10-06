@@ -1,0 +1,73 @@
+-- Supabase Schema for MTG Color Quiz
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+-- 1. Settings Versions
+CREATE TABLE settings_versions (
+    id SERIAL PRIMARY KEY,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    note TEXT,
+    active BOOLEAN DEFAULT false,
+    settings JSONB NOT NULL,
+    typical_values JSONB NOT NULL,
+    norms JSONB NOT NULL
+);
+
+-- Enable RLS (no public policies, so only Service Role can access)
+ALTER TABLE settings_versions ENABLE ROW LEVEL SECURITY;
+
+-- Insert initial active settings
+INSERT INTO settings_versions (note, active, settings, typical_values, norms)
+VALUES (
+    'Initial v1.0 specification defaults',
+    true,
+    '{"weights":{"values":0.35,"bigfive":0.4,"enneagram":0.25},"softmax_tau":1.542,"dilemma_strength":0.05,"dilemma_scale":6,"include_ratio":0.72,"lean_ratio":0.62,"label_close":0.04,"label_moderate":0.1}'::jsonb,
+    '{"quick":{"values":{"mean":{"W":0.0066,"U":-0.0558,"B":-0.0425,"R":0.0486,"G":-0.0018},"sd":{"W":0.5626,"U":0.839,"B":0.8208,"R":0.9584,"G":0.655}},"bigfive":{"mean":{"W":-0.1265,"U":-0.112,"B":0.0619,"R":0.0484,"G":-0.0455},"sd":{"W":2.4222,"U":2.448,"B":1.6901,"R":2.3351,"G":2.2963}},"enneagram":{"mean":{"W":0.2286,"U":0.1979,"B":0.2341,"R":0.1672,"G":0.1722},"sd":{"W":0.1877,"U":0.1695,"B":0.2054,"R":0.1762,"G":0.1543}}},"long":{"values":{"mean":{"W":0.0068,"U":-0.0565,"B":-0.051,"R":0.0536,"G":-0.0017},"sd":{"W":0.5031,"U":0.8425,"B":0.8623,"R":1.0046,"G":0.6003}},"bigfive":{"mean":{"W":-0.1291,"U":-0.1088,"B":0.0663,"R":0.0487,"G":-0.052},"sd":{"W":2.2933,"U":2.3242,"B":1.6004,"R":2.2195,"G":2.1719}},"enneagram":{"mean":{"W":0.2283,"U":0.1981,"B":0.2345,"R":0.1676,"G":0.1714},"sd":{"W":0.1876,"U":0.1696,"B":0.2058,"R":0.1759,"G":0.1542}}}}'::jsonb,
+    '{"scale_sd":{"E":0.764,"A":0.603,"C":0.673,"N":0.687,"O":0.616},"us_norms":{"O":3.62,"C":3.66,"E":3.31,"A":3.81,"N":2.62},"countries":{"Argentina":{"O":3.67,"C":3.54,"E":3.24,"A":3.37,"N":2.97},"Australia":{"O":3.62,"C":3.38,"E":3.23,"A":3.66,"N":2.68},"Austria":{"O":3.58,"C":3.44,"E":3.36,"A":3.56,"N":2.6},"Bangladesh":{"O":3.83,"C":3.44,"E":2.93,"A":3.84,"N":2.7},"Belgium":{"O":3.9,"C":3.19,"E":3,"A":3.51,"N":2.87},"Bolivia":{"O":3.66,"C":3.33,"E":3.26,"A":3.79,"N":2.64},"Botswana":{"O":3.51,"C":3.68,"E":3.28,"A":3.94,"N":2.52},"Brazil":{"O":3.57,"C":3.35,"E":3,"A":3.56,"N":2.84},"Canada":{"O":3.54,"C":3.6,"E":3.18,"A":3.76,"N":2.66},"Chile":{"O":3.91,"C":3.64,"E":3.12,"A":3.63,"N":2.72},"Congo":{"O":3.39,"C":4.04,"E":3.4,"A":4.1,"N":2.25},"Croatia":{"O":3.5,"C":3.39,"E":3.44,"A":3.52,"N":2.36},"Cyprus":{"O":3.58,"C":3.56,"E":3.24,"A":3.88,"N":2.72},"Czech Republic":{"O":3.66,"C":3.18,"E":3.33,"A":3.45,"N":2.69},"Estonia":{"O":3.82,"C":3.38,"E":3.34,"A":3.78,"N":2.41},"Ethiopia":{"O":3.44,"C":3.95,"E":3.09,"A":3.92,"N":2.35},"Fiji":{"O":3.45,"C":3.39,"E":3.29,"A":3.77,"N":2.48},"Finland":{"O":3.64,"C":3.77,"E":3.3,"A":3.78,"N":2.47},"France":{"O":3.5,"C":3.61,"E":2.96,"A":3.61,"N":2.78},"Germany":{"O":3.48,"C":3.43,"E":3.33,"A":3.51,"N":2.64},"Greece":{"O":3.71,"C":3.49,"E":3.2,"A":3.96,"N":2.84},"Hong Kong":{"O":3.11,"C":3.09,"E":3.07,"A":3.37,"N":2.79},"India":{"O":3.53,"C":3.48,"E":3.11,"A":3.84,"N":2.62},"Indonesia":{"O":3.5,"C":3.47,"E":3.41,"A":3.59,"N":2.6},"Israel":{"O":3.68,"C":3.82,"E":3.21,"A":3.78,"N":2.57},"Italy":{"O":3.62,"C":3.57,"E":3.29,"A":3.6,"N":2.73},"Japan":{"O":3.1,"C":2.84,"E":3.06,"A":3.34,"N":3.16},"Jordan":{"O":3.44,"C":3.64,"E":3.18,"A":4.03,"N":2.61},"Latvia":{"O":3.61,"C":3.27,"E":3.26,"A":3.44,"N":2.7},"Lebanon":{"O":3.58,"C":3.29,"E":3.18,"A":3.57,"N":2.85},"Lithuania":{"O":3.56,"C":3.29,"E":3.29,"A":3.36,"N":2.75},"Malaysia":{"O":3.47,"C":3.46,"E":3.31,"A":3.72,"N":2.49},"Malta":{"O":3.66,"C":3.39,"E":3.34,"A":3.78,"N":2.78},"Mexico":{"O":3.76,"C":3.37,"E":3.33,"A":3.78,"N":2.48},"Morocco":{"O":3.56,"C":3.34,"E":3.22,"A":3.75,"N":2.68},"Netherlands":{"O":3.62,"C":3.25,"E":3.29,"A":3.57,"N":2.52},"New Zealand":{"O":3.59,"C":3.27,"E":3.36,"A":3.62,"N":2.59},"Peru":{"O":3.7,"C":3.48,"E":3.18,"A":3.43,"N":2.85},"Philippines":{"O":3.58,"C":3.2,"E":3.17,"A":3.69,"N":2.72},"Poland":{"O":3.56,"C":3.4,"E":3.24,"A":3.61,"N":2.74},"Portugal":{"O":3.64,"C":3.51,"E":3.16,"A":3.78,"N":2.63},"Romania":{"O":3.81,"C":3.53,"E":3.34,"A":3.53,"N":2.48},"Serbia":{"O":3.77,"C":3.49,"E":3.46,"A":3.67,"N":2.63},"Slovakia":{"O":3.78,"C":3.15,"E":3.24,"A":3.65,"N":2.73},"Slovenia":{"O":3.65,"C":3.61,"E":3.35,"A":3.82,"N":2.3},"South Africa":{"O":3.56,"C":3.63,"E":3.28,"A":3.81,"N":2.55},"South Korea":{"O":3.27,"C":3.03,"E":2.92,"A":3.45,"N":2.89},"Spain":{"O":3.6,"C":3.44,"E":3.23,"A":3.52,"N":2.9},"Switzerland":{"O":3.78,"C":3.33,"E":3.35,"A":3.67,"N":2.53},"Taiwan":{"O":3.36,"C":3.16,"E":3.14,"A":3.49,"N":2.84},"Tanzania":{"O":3.51,"C":3.88,"E":3.25,"A":3.77,"N":2.46},"Turkey":{"O":3.79,"C":3.57,"E":3.43,"A":3.68,"N":2.61},"USA":{"O":3.62,"C":3.66,"E":3.31,"A":3.81,"N":2.62},"Ukraine":{"O":3.13,"C":3.25,"E":3.04,"A":3.15,"N":2.48},"United Kingdom":{"O":3.37,"C":3.45,"E":3.29,"A":3.65,"N":2.72},"Zimbabwe":{"O":3.53,"C":3.78,"E":3.21,"A":3.8,"N":2.5}},"country_region":{"USA":"North America","Canada":"North America","Mexico":"North America","Argentina":"South America","Bolivia":"South America","Brazil":"South America","Chile":"South America","Peru":"South America","Austria":"Western Europe","Belgium":"Western Europe","Finland":"Western Europe","France":"Western Europe","Germany":"Western Europe","Netherlands":"Western Europe","Switzerland":"Western Europe","United Kingdom":"Western Europe","Croatia":"Eastern Europe","Czech Republic":"Eastern Europe","Estonia":"Eastern Europe","Latvia":"Eastern Europe","Lithuania":"Eastern Europe","Poland":"Eastern Europe","Romania":"Eastern Europe","Serbia":"Eastern Europe","Slovakia":"Eastern Europe","Slovenia":"Eastern Europe","Ukraine":"Eastern Europe","Cyprus":"Southern Europe","Greece":"Southern Europe","Italy":"Southern Europe","Malta":"Southern Europe","Portugal":"Southern Europe","Spain":"Southern Europe","Israel":"Middle East","Jordan":"Middle East","Lebanon":"Middle East","Turkey":"Middle East","Botswana":"Africa","Congo":"Africa","Ethiopia":"Africa","Morocco":"Africa","South Africa":"Africa","Tanzania":"Africa","Zimbabwe":"Africa","Australia":"Oceania","Fiji":"Oceania","New Zealand":"Oceania","Bangladesh":"South and Southeast Asia","India":"South and Southeast Asia","Indonesia":"South and Southeast Asia","Malaysia":"South and Southeast Asia","Philippines":"South and Southeast Asia","Hong Kong":"East Asia","Japan":"East Asia","South Korea":"East Asia","Taiwan":"East Asia"},"regions":{"North America":{"O":3.64,"C":3.54,"E":3.27,"A":3.78,"N":2.59},"South America":{"O":3.7,"C":3.47,"E":3.16,"A":3.56,"N":2.8},"Western Europe":{"O":3.61,"C":3.43,"E":3.24,"A":3.61,"N":2.64},"Eastern Europe":{"O":3.62,"C":3.36,"E":3.3,"A":3.54,"N":2.57},"Southern Europe":{"O":3.64,"C":3.49,"E":3.25,"A":3.75,"N":2.77},"Middle East":{"O":3.62,"C":3.58,"E":3.25,"A":3.77,"N":2.66},"Africa":{"O":3.5,"C":3.76,"E":3.25,"A":3.87,"N":2.47},"Oceania":{"O":3.55,"C":3.35,"E":3.29,"A":3.68,"N":2.58},"South and Southeast Asia":{"O":3.58,"C":3.41,"E":3.18,"A":3.74,"N":2.63},"East Asia":{"O":3.21,"C":3.03,"E":3.05,"A":3.41,"N":2.92},"Global (all 56 nations)":{"O":3.58,"C":3.45,"E":3.23,"A":3.66,"N":2.65}}}'::jsonb
+);
+
+-- 2. Responses
+CREATE TABLE responses (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    public_id TEXT NOT NULL UNIQUE,
+    secret_token TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    status TEXT NOT NULL CHECK (status IN ('in_progress', 'completed')),
+    version TEXT,
+    country TEXT,
+    comparison_group TEXT,
+    settings_version_id INTEGER REFERENCES settings_versions(id),
+    last_section TEXT,
+    answers JSONB,
+    dilemma_display_order JSONB,
+    raw JSONB,
+    z JSONB,
+    combined JSONB,
+    dilemma JSONB,
+    base_percentages JSONB,
+    percentages JSONB,
+    included TEXT[],
+    leans TEXT[],
+    missing TEXT[],
+    label TEXT,
+    result_name TEXT
+);
+
+-- Index for public lookup
+CREATE INDEX idx_responses_public_id ON responses(public_id);
+
+ALTER TABLE responses ENABLE ROW LEVEL SECURITY;
+
+-- 3. Feedback
+CREATE TABLE feedback (
+    id SERIAL PRIMARY KEY,
+    response_id UUID REFERENCES responses(id) ON DELETE CASCADE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    accuracy INTEGER CHECK (accuracy BETWEEN 1 AND 5),
+    self_colors TEXT[],
+    self_unsure BOOLEAN
+);
+
+ALTER TABLE feedback ENABLE ROW LEVEL SECURITY;
+

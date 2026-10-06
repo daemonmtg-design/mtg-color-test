@@ -1,0 +1,12 @@
+export const SETTINGS = {
+  WEIGHTS: { values: 0.35, bigfive: 0.40, enneagram: 0.25 },
+  SOFTMAX_TAU: 1.542,
+  DILEMMA_STRENGTH: 0.05,
+  DILEMMA_SCALE: 6.0,
+  INCLUDE_RATIO: 0.72,
+  LEAN_RATIO: 0.62,
+  LABEL_CLOSE: 0.04,
+  LABEL_MODERATE: 0.10,
+  QUICK_VERSION_ENABLED: false,
+  SITE_STAGE: 'alpha',
+};
